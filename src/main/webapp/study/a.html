@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv=content-type content="text/html; charset=utf-8">
+    <title>a.html页面</title>
+    <script type="text/javascript">
+
+        window.onload=function(){
+            document.frames['content'].document.styleSheets[0].addRule("#abc","color:#FF0000");
+        }
+
+    </script>
+</head>
+<body>
+
+<iframe src="b.html" id="content" name="content" height="300" width="468" scrolling="no" frameborder="1"></iframe>
+
+</body>
+</html>
