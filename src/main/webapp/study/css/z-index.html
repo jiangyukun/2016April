@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>line-height</title>
+    <style>
+        * {
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        .debug {
+            border: 1px solid #aaa;
+        }
+
+        .div1 {
+            position: relative;
+            top: 10px;
+            left: 10px;
+            width: 100px;
+            height: 100px;
+            background: #890;
+            /*z-index: 10;*/
+        }
+
+        .div2 {
+            position: fixed;
+            top: 50px;
+            left: 50px;
+            width: 100px;
+            height: 100px;
+            background: #ccc;
+        }
+    </style>
+</head>
+<body>
+
+<div hidden class="div1 line_height debug">div1</div>
+<div class="div2 line_height debug">div2</div>
+ccs
+</body>
+</html>

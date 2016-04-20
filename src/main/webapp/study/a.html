@@ -3,17 +3,31 @@
 <head>
     <meta http-equiv=content-type content="text/html; charset=utf-8">
     <title>a.html页面</title>
+    <style>
+        iframe {
+            border: 0;
+        }
+    </style>
     <script type="text/javascript">
 
-        window.onload=function(){
-            document.frames['content'].document.styleSheets[0].addRule("#abc","color:#FF0000");
+        window.onload = function () {
+//            window.frames['content'].document.styleSheets[0].addRule("#abc", "color:#FF0000");
+
+            var iframeDocument = window.frames['content'].document;
+
+            var cssFile = document.createElement('link');
+            cssFile.setAttribute("rel", "stylesheet");
+            cssFile.setAttribute("type", "text/css");
+            cssFile.setAttribute("href", 'css/a.css');
+
+            iframeDocument.getElementsByTagName("head")[0].appendChild(cssFile);
         }
 
     </script>
 </head>
 <body>
-
-<iframe src="b.html" id="content" name="content" height="300" width="468" scrolling="no" frameborder="1"></iframe>
-
+abc
+<iframe src="http://10.137.1.121:4007/study/b.html" id="content" name="content" height="300" width="468" scrolling="no" frameborder="1"></iframe>
+cde
 </body>
 </html>
